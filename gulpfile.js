@@ -141,8 +141,8 @@ exports.imageSprite = imageSprite;
 exports.default = gulp.series(gulp.parallel(scssTask, jsTask));
 
 // Production
-gulp.task('build:prod', gulp.parallel([css, js, imageTask, fontTask, iconTask, userefTask])
+gulp.task('prod', gulp.parallel([css, js, imageTask, fontTask, iconTask, userefTask])
 );
 
 // Development
-gulp.task('build:dev', gulp.parallel(watchTask, browserSync));
+gulp.task('dev', gulp.parallel(watchTask, browserSync));
