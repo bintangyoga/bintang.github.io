@@ -1,7 +1,7 @@
 {
-  "name": "gulp-sample",
+  "name": "upn-voting",
   "version": "1.0.0",
-  "description": "just gulp starter\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C a gulp starter kit",
+  "description": "upn voting system",
   "main": "gulpfile.js",
   "dependencies": {
     "autoprefixer": "^10.0.1",
@@ -37,7 +37,7 @@
   "author": "Bintang Yoga Pamungkas",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/bintangyoga/gulp-sample/issues"
+    "url": "https://gitlab.com/bintangyoga/upn-voting.git"
   },
-  "homepage": "https://gitlab.com/bintangyoga/gulp-sample#readme"
+  "homepage": "https://gitlab.com/bintangyoga/upn-voting.git#readme"
 }
