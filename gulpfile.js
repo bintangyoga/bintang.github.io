@@ -62,11 +62,9 @@ function scssTask() {
 function jsTask() {
     return gulp
         .src([
-            'src/assets/js/jquery.min.js',
-            'src/assets/js/bootstrap.min.js',
-            'src/assets/js/wow.min.js',
-            'src/assets/js/toggler.js',
-            'src/assets/js/animate.js',
+            'node_modules/@popperjs/core/dist/umd/popper.min.js',
+            'node_modules/jquery/dist/jquery.slim.min.js',
+            'node_modules/bootstrap/dist/js/bootstrap.min.js',
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('script.js'))
@@ -145,4 +143,4 @@ gulp.task('prod', gulp.parallel([css, js, imageTask, fontTask, iconTask, userefT
 );
 
 // Development
-gulp.task('dev', gulp.parallel(watchTask, browserSync));
+gulp.task('dev', gulp.parallel(watchTask, browserSync, jsTask));
