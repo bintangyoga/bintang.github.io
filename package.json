@@ -1,12 +1,13 @@
 {
-  "name": "upn-voting",
+  "name": "gulp-newconfig",
   "version": "1.0.0",
-  "description": "upn voting system",
+  "description": "gulp-newconfig",
   "main": "gulpfile.js",
   "dependencies": {
     "@popperjs/core": "^2.5.3",
     "autoprefixer": "^10.0.1",
     "bootstrap": "^4.5.2",
+    "bootstrap-icons": "^1.0.0",
     "browser-sync": "^2.26.12",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
@@ -32,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/bintangyoga/gulp-sample.git"
+    "url": "git+https://gitlab.com/bintangyoga/gulp-newconfig.git"
   },
   "keywords": [
     "gulp",
@@ -41,7 +42,7 @@
   "author": "Bintang Yoga Pamungkas",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/bintangyoga/upn-voting.git"
+    "url": "https://gitlab.com/bintangyoga/gulp-newconfig.git"
   },
-  "homepage": "https://gitlab.com/bintangyoga/upn-voting.git#readme"
+  "homepage": "https://gitlab.com/bintangyoga/gulp-newconfig.git#readme"
 }

@@ -1,0 +1,18 @@
+$color-primary:     purple;
+// $color-secondary:   ;
+
+$theme-colors: map-merge(
+    (
+      "primary":    $color-primary,
+    //   "secondary":  $color-secondary,
+    //   "success":    $color-success,
+    //   "info":       $color-info,
+    //   "warning":    $color-warning,
+    //   "danger":     $color-danger,
+    //   "light":      $color-light,
+    //   "dark":       $color-dark
+    ),
+    $theme-colors
+  );
+
+  
