@@ -1,7 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,800;1,300;1,500&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,800;1,300;1,500&display=swap');
+
+
+@font-face {
+    font-family: NerkoOne-Regular;
+    src: url(../../font/NerkoOne-Regular.woff);
+}
+
+// @font-face {
+//     font-family: "DroidSerif";
+//     src: url("DroidSerif-Regular-webfont.ttf") format("truetype");
+//     font-weight: normal;
+//     font-style: normal;
+//   }
+  
+//   @font-face {
+//     font-family: "DroidSerif";
+//     src: url("DroidSerif-Italic-webfont.ttf") format("truetype");
+//     font-weight: normal;
+//     font-style: italic;
+//   }
+  
+//   @font-face {
+//     font-family: "DroidSerif";
+//     src: url("DroidSerif-Bold-webfont.ttf") format("truetype");
+//     font-weight: bold;
+//     font-style: normal;
+//   }
+  
+//   @font-face {
+//     font-family: "DroidSerif";
+//     src: url("DroidSerif-BoldItalic-webfont.ttf") format("truetype");
+//     font-weight: bold;
+//     font-style: italic;
+//   }
+
+// body{
+//     font-family: 'Montserrat', sans-serif;
+// }
 
 body{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'NerkoOne-Regular', cursive;
 }
 
 h1{

@@ -17,6 +17,7 @@ const fonts = require('postcss-font-magician');
 const sourcemaps = require('gulp-sourcemaps');
 const browsersync = require('browser-sync').create();
 const del = require('del');
+purgecss = require('gulp-purgecss');
 
 // File Path
 const files = {
@@ -137,12 +138,23 @@ function cleanDist(resolve) {
     resolve();
 }
 
+function cleanCSS() {
+    return gulp
+    .src('src/**/*.css')
+    .pipe( 
+      purgecss({
+        content: ['src/**/*.html']
+      })
+    )
+    .pipe(gulp.dest('dist/'))
+}
+
 // Default
 exports.imageSprite = imageSprite;
 exports.default = gulp.series(gulp.parallel(scssTask, jsTask));
 
 // Production
-gulp.task('prod', gulp.parallel([cleanDist, css, js, imageTask, fontTask, userefTask]));
+gulp.task('prod', gulp.parallel([cleanDist, css, js, imageTask, fontTask, userefTask, cleanCSS]));
 
 // Development
 gulp.task('dev', gulp.parallel(watchTask, browserSync, jsTask));
