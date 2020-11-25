@@ -4,6 +4,7 @@
   "description": "gulp-newconfig",
   "main": "gulpfile.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "@popperjs/core": "^2.5.3",
     "autoprefixer": "^10.0.1",
     "bootstrap": "^4.5.2",
@@ -27,7 +28,9 @@
     "postcss-inline-svg": "^4.1.0",
     "vinyl-buffer": "^1.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "del": "^6.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

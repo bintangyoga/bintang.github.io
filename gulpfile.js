@@ -16,6 +16,7 @@ const merge = require('merge-stream');
 const fonts = require('postcss-font-magician');
 const sourcemaps = require('gulp-sourcemaps');
 const browsersync = require('browser-sync').create();
+const del = require('del');
 
 // File Path
 const files = {
@@ -63,8 +64,9 @@ function jsTask() {
     return gulp
         .src([
             'node_modules/@popperjs/core/dist/umd/popper.min.js',
-            'node_modules/jquery/dist/jquery.slim.min.js',
+            'node_modules/jquery/dist/jquery.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
+            'node_modules/@fortawesome/fontawesome-free/js/all.js',
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('script.js'))
@@ -86,9 +88,9 @@ function fontTask() {
         .pipe(gulp.dest('dist/assets/fonts'));
 }
 
-function iconTask() {
-    return gulp.src('src/assets/icon/**/*').pipe(gulp.dest('dist/assets/icon'));
-}
+// function iconTask() {
+//     return gulp.src('src/assets/icon/**/*').pipe(gulp.dest('dist/assets/icon'));
+// }
 
 function imageSprite() {
     var spriteData = gulp.src(files.imgPath).pipe(
@@ -134,13 +136,17 @@ function watchTask() {
     gulp.watch('src/*.html', browserSyncReload);
 }
 
+function cleanDist(resolve) {
+    del.sync('dist');
+    resolve();
+}
+
 // Default
 exports.imageSprite = imageSprite;
 exports.default = gulp.series(gulp.parallel(scssTask, jsTask));
 
 // Production
-gulp.task('prod', gulp.parallel([css, js, imageTask, fontTask, iconTask, userefTask])
-);
+gulp.task('prod', gulp.parallel([cleanDist, css, js, imageTask, fontTask, userefTask]));
 
 // Development
 gulp.task('dev', gulp.parallel(watchTask, browserSync, jsTask));
