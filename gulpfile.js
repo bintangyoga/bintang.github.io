@@ -88,10 +88,6 @@ function fontTask() {
         .pipe(gulp.dest('dist/assets/fonts'));
 }
 
-// function iconTask() {
-//     return gulp.src('src/assets/icon/**/*').pipe(gulp.dest('dist/assets/icon'));
-// }
-
 function imageSprite() {
     var spriteData = gulp.src(files.imgPath).pipe(
         spritesmith({
