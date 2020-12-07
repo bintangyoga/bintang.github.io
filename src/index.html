@@ -13,7 +13,7 @@
   <h1 class="text-center mt-5">Here we go again :(</h1>
 
   <script src="assets/js/script.js"></script>
-  
+
   <script type="text/javascript">
     var Page = function () {
       var _componentPage = function () {
@@ -32,6 +32,10 @@
         }
       }
     }();
+
+    document.addEventListener('DOMContentLoaded', function () {
+      Page.init();
+    });
   </script>
 
 </body>
