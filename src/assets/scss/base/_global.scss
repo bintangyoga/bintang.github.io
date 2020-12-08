@@ -11,16 +11,37 @@
 //          url("../../font/NerkoOne-Regular.ttf") format("truetype")
 // }
 
-body{
+body {
     font-family: 'NerkoOne-Regular', cursive;
 }
 
-h1{
+h1 {
     font-size: 100px !important;
     font-weight: 500;
 }
 
-h2{
+h2 {
     font-weight: 100px !important;
     font-weight: 800;
 }
+
+/* Works on Firefox */
+// * {
+//     scrollbar-width: thin;
+//     scrollbar-color: blue orange;
+// }
+
+/* Works on Chrome, Edge, and Safari */
+// *::-webkit-scrollbar {
+//     width: 12px;
+// }
+
+// *::-webkit-scrollbar-track {
+//     background: orange;
+// }
+
+// *::-webkit-scrollbar-thumb {
+//     background-color: blue;
+//     border-radius: 20px;
+//     border: 3px solid orange;
+// }
