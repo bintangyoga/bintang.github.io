@@ -24,6 +24,7 @@
     "gulp.spritesmith": "^6.11.0",
     "jquery": "^3.5.1",
     "merge-stream": "^2.0.0",
+    "minibarjs": "^0.5.1",
     "postcss": "^8.1.1",
     "postcss-font-magician": "^2.3.1",
     "postcss-inline-svg": "^4.1.0",
