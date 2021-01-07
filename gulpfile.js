@@ -57,6 +57,7 @@ function scssTask() {
         .on('error', sass.logError)
         .pipe(postcss(plugin))
         .pipe(sourcemaps.write())
+        
         .pipe(gulp.dest('src/assets/css'))
         .pipe(browsersync.stream());
 }
@@ -67,7 +68,7 @@ function jsTask() {
             'node_modules/@popperjs/core/dist/umd/popper.min.js',
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            'node_modules/@fortawesome/fontawesome-free/js/all.js',
+            // 'node_modules/@fortawesome/fontawesome-free/js/all.js',
         ])
         .pipe(sourcemaps.init())
         .pipe(concat('script.js'))

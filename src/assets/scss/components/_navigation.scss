@@ -1,0 +1,18 @@
+
+#menu-overlay {
+    @include column-center();
+    width: 100%;
+    height: 100vh;
+    background-color: aquamarine;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.2s linear, top 0.2s linear;
+    position: fixed;
+    top: 50vh;
+}
+
+.menu-overlay__ul {
+    @include column-center();
+    width: 100%;
+    height: 70%;
+}

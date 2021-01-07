@@ -3,9 +3,21 @@
 // @include media-breakpoint-down(xs) {
 
 // }
-// @include media-breakpoint-down(sm) {
+@include media-breakpoint-down(sm) {
+    .navbar-big {
+        display: none;
+    }
 
-// }
+    .bottom-navigation {
+        @include column-center();
+        overflow: hidden;
+        background-color: #333;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        color: #fff;
+    }
+}
 // @include media-breakpoint-down(md) {
 
 // }

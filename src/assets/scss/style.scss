@@ -1,7 +1,10 @@
 @import '../../../node_modules/bootstrap/scss/bootstrap';
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
 @import './utilities/variables';
+@import './utilities/mixins'; 
 
+@import './components/navigation';
 @import './components/button';
 
 @import './layouts/index';
