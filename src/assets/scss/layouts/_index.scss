@@ -1,11 +1,16 @@
 h1{
-    font-size: 100px;
-    color: $color-primary;
+    font-size: 400px;
+    color: blue;
+}
+
+.aww {
+    font-size: 20px;
 }
 
 
 #scrollable {
-    background-color: black;
+    background-color: red;
+    color: white;
     width: 50vw;
     height: 50vh;
   }
