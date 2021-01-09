@@ -62,7 +62,7 @@ function scssTask() {
         .pipe(sourcemaps.write())
 
     cssStream = gulp.src([
-        // 'node_modules/minibarjs/dist/minibar.min.css',
+        'node_modules/minibarjs/dist/minibar.min.css',
         // 'node_modules/@splidejs/splide/dist/css/splide.min.css',
     ]);
 
@@ -79,7 +79,7 @@ function jsTask() {
             'node_modules/@popperjs/core/dist/umd/popper.min.js',
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            // 'node_modules/minibarjs/dist/minibar.min.js',
+            'node_modules/minibarjs/dist/minibar.min.js',
             // 'node_modules/@splidejs/splide/dist/js/splide.min.js'
         ])
         .pipe(sourcemaps.init())

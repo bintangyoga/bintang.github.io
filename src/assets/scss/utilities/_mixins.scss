@@ -54,6 +54,10 @@
 	align-content: center;
 }
 
+.column-center {
+	@include column-center();
+}
+
 @mixin column-center-start {
 	display: flex;
 	flex-direction: column;

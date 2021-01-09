@@ -1,5 +1,5 @@
-$color-primary:     purple;
-// $color-secondary:   ;
+$color-primary: red;
+$color-gradient-blue : linear-gradient(90deg, #007FEF 0%, #00DED8 100%);
 
 $theme-colors: map-merge(
     (
@@ -15,4 +15,4 @@ $theme-colors: map-merge(
     $theme-colors
   );
 
-  
+$color-default: #222222;
