@@ -9,6 +9,10 @@
 	align-content: center;
 }
 
+.row-center {
+	@include row-center();
+}
+
 @mixin row-center-start {
 	display: flex;
 	flex-direction: row;
