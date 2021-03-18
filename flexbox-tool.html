@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hello, world!</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="flexbox-tool">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 column-center py-5 mt-5 w-100 text-center">
+        <h1>Flexb&#128150;x Tool</h1>
+        <p class="mt-4">Made by Bintang Yoga Pamungkas</p>
+      </div>
+      <div class="col-12 py-5">
+        <div class="row row-center">
+          <div class="col-6 row-center">
+            <div class="flexbox-preview__wrapper">
+              <hr class="flexbox-preview__line flexbox-preview__line-top">
+              <hr class="flexbox-preview__line flexbox-preview__line-bottom">
+              <hr class="flexbox-preview__line flexbox-preview__line-left">
+              <hr class="flexbox-preview__line flexbox-preview__line-right">
+              <div class="flex-box__wrapper">
+                <div class="flex-box__item">1</div>
+                <div class="flex-box__item">2</div>
+                <div class="flex-box__item">3</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="flexbox-output__container">
+              <h4>CSS Output</h5>
+                <div class="flexbox-output__wrapper">
+                  <div>display: <span>flex</span></div>
+                  <div>flex-direction: <span id="codeFlexDirection"></span></div>
+                  <div>flex-wrap: <span id="codeFlexWrap"></span></div>
+                  <div>justify-content: <span id="codeJustifyContent"></span></div>
+                  <div>align-items: <span id="codeAlignItems"></span></div>
+                  <div>align-content: <span id="codeAlignContent"></span></div>
+                </div>
+                <button class="btn btn-duplicate row-center w-100 mt-3">
+                  <svg class="mr-2" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.6667 7.5H9.16667C8.24619 7.5 7.5 8.24619 7.5 9.16667V16.6667C7.5 17.5871 8.24619 18.3333 9.16667 18.3333H16.6667C17.5871 18.3333 18.3333 17.5871 18.3333 16.6667V9.16667C18.3333 8.24619 17.5871 7.5 16.6667 7.5Z"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M4.16666 12.5H3.33333C2.8913 12.5 2.46738 12.3244 2.15482 12.0118C1.84226 11.6993 1.66666 11.2754 1.66666 10.8333V3.33333C1.66666 2.8913 1.84226 2.46738 2.15482 2.15482C2.46738 1.84226 2.8913 1.66666 3.33333 1.66666H10.8333C11.2754 1.66666 11.6993 1.84226 12.0118 2.15482C12.3244 2.46738 12.5 2.8913 12.5 3.33333V4.16666"
+                      stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Duplicate Code
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="option-panel">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="row option-panel-row">
+            <div class="col-2">
+              <h3>Flex Direction</h3>
+              <ul>
+                <li>
+                  <input id="flexDirection1" value="row" type="radio" name="flexDirection" class="switch" checked>
+                  <label for="flexDirection1">Row (default)</label>
+                </li>
+                <li>
+                  <input id="flexDirection2" value="row-reverse" type="radio" name="flexDirection" class="switch">
+                  <label for="flexDirection2">Row-reverse</label>
+                </li>
+                <li>
+                  <input id="flexDirection3" value="column" type="radio" name="flexDirection" class="switch">
+                  <label for="flexDirection3">Column</label>
+                </li>
+                <li>
+                  <input id="flexDirection4" value="column-reverse" type="radio" name="flexDirection" class="switch">
+                  <label for="flexDirection4">Column-reverse</label>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <h3>Flex Wrap</h3>
+              <ul>
+                <li>
+                  <input id="flexWrap1" value="nowrap" type="radio" name="flexWrap" class="switch" checked>
+                  <label for="flexWrap1">Nowrap (default)</label>
+                </li>
+                <li>
+                  <input id="flexWrap2" value="wrap" type="radio" name="flexWrap" class="switch">
+                  <label for="flexWrap2">Wrap</label>
+                </li>
+                <li>
+                  <input id="flexWrap3" value="wrap-reverse" type="radio" name="flexWrap" class="switch">
+                  <label for="flexWrap3">Wrap-reverse</label>
+                </li>
+              </ul>
+            </div>
+            <div class="col-3 pl-5">
+              <h3>Justify Content</h3>
+              <ul>
+                <li>
+                  <input id="justifyContent1" value="flex-start" type="radio" name="justifyContent" class="switch">
+                  <label for="justifyContent1">Flex-start (default)</label>
+                </li>
+                <li>
+                  <input id="justifyContent2" value="flex-end" type="radio" name="justifyContent" class="switch">
+                  <label for="justifyContent2">Flex-end</label>
+                </li>
+                <li>
+                  <input id="justifyContent3" value="center" type="radio" name="justifyContent" class="switch" checked>
+                  <label for="justifyContent3">Center</label>
+                </li>
+                <li>
+                  <input id="justifyContent4" value="space-around" type="radio" name="justifyContent" class="switch">
+                  <label for="justifyContent5">Space-around</label>
+                </li>
+                <li>
+                  <input id="justifyContent5" value="space-between" type="radio" name="justifyContent" class="switch">
+                  <label for="justifyContent5">Space-between</label>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <h3>Align Items</h3>
+              <ul>
+                <li>
+                  <input id="alignItems1" value="stretch" type="radio" name="alignItems" class="switch">
+                  <label for="alignItems1">Stretch (default)</label>
+                </li>
+                <li>
+                  <input id="alignItems2" value="baseline" type="radio" name="alignItems" class="switch">
+                  <label for="alignItems2">Baseline</label>
+                </li>
+                <li>
+                  <input id="alignItems3" value="center" type="radio" name="alignItems" class="switch" checked>
+                  <label for="alignItems3">Center</label>
+                </li>
+                <li>
+                  <input id="alignItems4" value="flex-start" type="radio" name="alignItems" class="switch">
+                  <label for="alignItems4">Flex-start</label>
+                </li>
+                <li>
+                  <input id="alignItems5" value="flex-end" type="radio" name="alignItems" class="switch">
+                  <label for="alignItems5">Flex-end</label>
+                </li>
+              </ul>
+            </div>
+            <div class="col-2">
+              <h3>Align Content</h3>
+              <ul>
+                <li>
+                  <input id="alignContent1" value="stretch" type="radio" name="alignContent" class="switch">
+                  <label for="alignContent1">Stretch (default)</label>
+                </li>
+                <li>
+                  <input id="alignContent2" value="center" type="radio" name="alignContent" class="switch" checked>
+                  <label for="alignContent2">Center</label>
+                </li>
+                <li>
+                  <input id="alignContent3" value="flex-start" type="radio" name="alignContent" class="switch">
+                  <label for="alignContent3">Flex-start</label>
+                </li>
+                <li>
+                  <input id="alignContent4" value="flex-end" type="radio" name="alignContent" class="switch">
+                  <label for="alignContent4">Flex-end</label>
+                </li>
+                <li>
+                  <input id="alignContent5" value="space-around" type="radio" name="alignContent" class="switch">
+                  <label for="alignContent5">Space-around</label>
+                </li>
+                <li>
+                  <input id="alignContent6" value="space-between" type="radio" name="alignContent" class="switch">
+                  <label for="alignContent6">Space-between</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    $(document).ready(function () {
+      var codeFlexDirection = $(".flex-box__wrapper").css("flex-direction");
+      var codeFlexWrap = $(".flex-box__wrapper").css("flex-wrap");
+      var codeJustifyContent = $(".flex-box__wrapper").css("justify-content");
+      var codeAlignItems = $(".flex-box__wrapper").css("align-items");
+      var codeAlignContent = $(".flex-box__wrapper").css("align-content");
+      $("#codeFlexDirection").html(codeFlexDirection);
+      $("#codeFlexWrap").html(codeFlexWrap);
+      $("#codeJustifyContent").html(codeJustifyContent);
+      $("#codeAlignItems").html(codeAlignItems);
+      $("#codeAlignContent").html(codeAlignContent);
+
+      $("input:radio[name='flexDirection']").change(function () {
+        var $flexDirection = $(this).val();
+        $("#codeFlexDirection").html($flexDirection);
+        $(".flex-box__wrapper").css({
+          "flex-direction": $flexDirection,
+        });
+      });
+
+      $("input:radio[name='flexWrap']").change(function () {
+        var $flexWrap = $(this).val();
+        $("#codeFlexWrap").html($flexWrap);
+        $(".flex-box__wrapper").css({
+          "flex-wrap": $flexWrap,
+        });
+      });
+
+      $("input:radio[name='justifyContent']").change(function () {
+        var $justifyContent = $(this).val();
+        $("#codeJustifyContent").html($justifyContent);
+        $(".flex-box__wrapper").css({
+          "justify-content": $justifyContent,
+        });
+      });
+
+      $("input:radio[name='alignItems']").change(function () {
+        var $alignItems = $(this).val();
+        $("#codeAlignItems").html($alignItems);
+        $(".flex-box__wrapper").css({
+          "align-items": $alignItems,
+        });
+      });
+
+      $("input:radio[name='alignContent']").change(function () {
+        var $alignContent = $(this).val();
+        $("#codeAlignContent").html($alignContent);
+        $(".flex-box__wrapper").css({
+          "align-content": $alignContent,
+        });
+      });
+    });
+  </script>
+
+  <!-- <script>
+    const instance = new MiniBar("#scrollable");
+  </script> -->
+
+  <!-- <script>
+    new Splide('.splide').mount();
+  </script> -->
+
+  <!-- <script type="text/javascript">
+    var Page = function () {
+      var _componentPage = function () {
+
+        $(document).ready(function () {
+          mobileNavigation();
+        });
+
+        mobileNavigation = () => {
+          $("#botNav").click(function () {
+            $('#menu-overlay').css({
+              'visibility': 'visible',
+              'opacity': '1',
+              'top': '0'
+            });
+          });
+          $("#closeBotNav").click(function () {
+            $('#menu-overlay').css({
+              'top': '50vh',
+              'visibility': 'hidden',
+              'opacity': '0'
+            });
+          });
+        }
+      };
+      return {
+        init: function () {
+          _componentPage();
+        }
+      }
+    }();
+    document.addEventListener('DOMContentLoaded', function () {
+      Page.init();
+    });
+
+  </script> -->
+</body>
+
+</html>
