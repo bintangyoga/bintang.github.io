@@ -10,6 +10,11 @@
 </head>
 
 <body id="flexbox-tool">
+  
+  <div class="text-wrap">
+    <textarea id="textA">
+    </textarea>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-12 column-center py-5 mt-5 w-100 text-center">
@@ -42,7 +47,7 @@
                   <div>align-items: <span id="codeAlignItems"></span></div>
                   <div>align-content: <span id="codeAlignContent"></span></div>
                 </div>
-                <button class="btn btn-duplicate row-center w-100 mt-3">
+                <button id="duplicateCode" class="btn btn-duplicate row-center w-100 mt-3">
                   <svg class="mr-2" width="20" height="20" viewBox="0 0 20 20" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -187,8 +192,28 @@
       </div>
     </div>
   </div>
-
   <script src="assets/js/script.js"></script>
+  <script>
+    document.getElementById('duplicateCode').addEventListener('click', function() {
+      let text = document.getElementById('textA');
+      text.select();
+      document.execCommand('copy');
+      let copyFlexDirection = $("#codeFlexDirection").text();
+      let copylexWrap = $("#codeFlexWrap").text();
+      let copyJustifyContent = $("#codeJustifyContent").text();
+      let copyAlignItems = $("#codeAlignItems").text();
+      let copyAlignContent = $("#codeAlignContent").text();
+      let copyCode = `
+        display: flex;
+        flex-direction: ${copyFlexDirection};
+        flex-wrap: ${copylexWrap};
+        justify-content: ${copyJustifyContent};
+        align-items: ${copyAlignItems};
+        align-content: ${copyAlignContent};
+      `;
+      let lower=$("#textA").val(copyCode);
+    })
+  </script>
   <script>
     $(document).ready(function () {
       var codeFlexDirection = $(".flex-box__wrapper").css("flex-direction");
